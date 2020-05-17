@@ -1,7 +1,7 @@
 export default (sequelize, DataTypes) => {
   const Car = sequelize.define('car', {
     plateNumber: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       primaryKey: true,
     },
     size: {
