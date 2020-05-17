@@ -5,7 +5,7 @@ export default (sequelize, DataTypes) => {
       primaryKey: true,
     },
     slotNumber: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       primaryKey: true,
     },
     carId: {
