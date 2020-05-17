@@ -1,6 +1,10 @@
 import Fastify from 'fastify';
 
+import parkingLots from './routes/parkingLots';
+
 const app = Fastify();
+
+app.register(parkingLots, { prefix: '/parking-lots' });
 
 app.get('/', async () => ({ message: 'API is available' }));
 

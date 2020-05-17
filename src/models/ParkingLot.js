@@ -9,10 +9,10 @@ export default (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    maxSlot: {
+    maxSlots: {
       type: DataTypes.INTEGER,
       allowNull: false,
-    },    
+    },
   });
 
   return ParkingLot;
