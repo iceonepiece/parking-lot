@@ -1,0 +1,9 @@
+{
+  "name": "parking-lot",
+  "version": "1.0.0",
+  "description": "Parking Lot API",
+  "main": "index.js",
+  "repository": "https://github.com/iceonepiece/parking-lot.git",
+  "author": "iceonepiece <iceonepiece@gmail.com>",
+  "license": "MIT"
+}
