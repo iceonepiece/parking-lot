@@ -10,7 +10,6 @@ const postgresUri = process.env.POSTGRES_URI || 'postgres://localhost/parking-lo
 
 const sequelize = new Sequelize(postgresUri, {
   logging: v => debug('app:sequelize')(v),
-  operatorsAliases: false,
   dialect: 'postgres',
 });
 
