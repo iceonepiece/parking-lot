@@ -7,7 +7,8 @@
   "author": "iceonepiece <iceonepiece@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon --exec babel-node src/index.js"
+    "dev": "nodemon --exec babel-node src/index.js",
+    "test": "jest --runInBand"
   },
   "dependencies": {
     "fastify": "^2.14.1"
@@ -15,6 +16,13 @@
   "devDependencies": {
     "babel-preset-env": "^1.7.0",
     "babel-preset-stage-0": "^6.24.1",
+    "jest": "^23.0.6",
     "nodemon": "^2.0.4"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "roots": [
+      "<rootDir>/test"
+    ]
   }
 }
