@@ -18,7 +18,7 @@ const getParkingLotStatus = async (req, res) => {
 
   const availableStatusList = parkingSlots.map(ps => ({
     slotNumber: ps.slotNumber,
-    available: !ps.carId,
+    available: !ps.carPlateNumber,
   }));
 
   return {
