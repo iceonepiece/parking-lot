@@ -8,8 +8,12 @@ export default (sequelize, DataTypes) => {
       type: DataTypes.INTEGER,
       primaryKey: true,
     },
-    carId: {
+    carPlateNumber: {
       type: DataTypes.STRING,
+      defaultValue: null,
+    },
+    carSize: {
+      type: DataTypes.ENUM('small', 'medium', 'large'),
       defaultValue: null,
     },
   });
