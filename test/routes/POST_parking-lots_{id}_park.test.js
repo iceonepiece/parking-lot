@@ -44,6 +44,8 @@ describe('POST /parking-lots/:id/park', () => {
     expect(res.statusCode).toBe(200);
     expect(data).toMatchObject({
       slotNumber: 1,
+      carPlateNumber: 'WW1942',
+      carSize: 'small',
     });
   });
 
