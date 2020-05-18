@@ -23,13 +23,12 @@ describe('POST /parking-lots/:id/leave', () => {
     };
 
     await db.ParkingLot.create(mockParkingLot);
-    await db.Car.create(mockCar);
-
     await db.ParkingSlot.bulkCreate([
       {
         parkingLotId: mockParkingLot.id,
         slotNumber: 1,
-        carId: 'leaving_car',
+        carPlateNumber: 'leaving_car',
+        carSize: 'large',
       },
     ]);
 
@@ -50,9 +49,9 @@ describe('POST /parking-lots/:id/leave', () => {
         slotNumber: 1,
       },
     });
-    expect(leftParkingSlot.carId).toBe(null);
-
-    const car = await db.Car.findByPk(mockCar.plateNumber);
-    expect(car).toBe(null);
+    expect(leftParkingSlot).toMatchObject({
+      carPlateNumber: null,
+      carSize: null,
+    });
   });
 });
